@@ -1,0 +1,111 @@
+div,input,section,p,pre {
+  box-sizing: border-box;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 50px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.card-container {
+  padding: 20px 0px;
+}
+
+.card {
+  margin: 20px auto;
+  width: 400px;
+  height: 500px;
+  border: 1px solid #343434;
+}
+
+.nameplate {
+  display:block;
+  width: 100%;
+  height: 50px;
+  padding: 5px 8px;
+}
+
+.nameplate-name,
+.nameplate-classification {
+  padding: 0;
+  text-align: left;
+}
+
+.nameplate-classification {
+  font-size: 12px;
+}
+
+.statline {
+  display: block;
+  justify-content: space-between;
+  width: 100%;
+  height: 75px;
+  margin: 0;
+  padding-left: 40%;
+}
+
+.weapon-stats {
+  height: 50px;
+  padding-left: 60%;
+}
+
+.statline-list {
+  width: 100%;
+  padding: 0;
+}
+
+.statline-attribute-list {
+  list-style: none;
+}
+
+.weapon-label,
+.weapon-stat{
+  float: left;
+  list-style: none;
+  height:25px;
+  width: 25%;
+}
+
+.statline-name {
+  padding-left: 60%;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: left;
+  width: 100%;
+}
+
+.statline-label,
+.statline-stat {
+  float: left;
+  list-style: none;
+  height:25px;
+  width: 14.28%;
+}
+
+.statline-attribute {
+  list-style: none;
+}
