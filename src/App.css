@@ -1,4 +1,4 @@
-div,input,section,p,pre {
+* {
   box-sizing: border-box;
 }
 
@@ -37,22 +37,43 @@ div,input,section,p,pre {
 
 .card {
   margin: 20px auto;
-  width: 400px;
-  height: 500px;
+  width: 362px;
+  height: 501px;
   border: 1px solid #343434;
+  position: relative;
+}
+
+.card-template {
+  width: 100%;
+  max-width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 0;
 }
 
 .nameplate {
+  position: relative;
   display:block;
-  width: 100%;
-  height: 50px;
-  padding: 5px 8px;
+  width: 76.6%;
+  margin: 13px 0 0 19%;
+  height: 39px;
+  z-index: 10;
+  background-color: #e4dcd1;
 }
 
 .nameplate-name,
 .nameplate-classification {
-  padding: 0;
+  position: relative;
+  padding: 0 0 0 8px;
   text-align: left;
+  color: #343434;
+  height: 18px;
+}
+
+.nameplate-name {
+  padding: 4px 0 0 8px;
+  font-size: 14px;
 }
 
 .nameplate-classification {
@@ -60,12 +81,12 @@ div,input,section,p,pre {
 }
 
 .statline {
+  position: relative;
   display: block;
-  justify-content: space-between;
-  width: 100%;
-  height: 75px;
-  margin: 0;
-  padding-left: 40%;
+  width: 50%;
+  height: 55px;
+  margin: 7px 0 0 47%;
+  padding: 2px 0 0 2px;
 }
 
 .weapon-stats {
@@ -86,26 +107,195 @@ div,input,section,p,pre {
 .weapon-stat{
   float: left;
   list-style: none;
-  height:25px;
+  height: 25px;
   width: 25%;
 }
 
-.statline-name {
-  padding-left: 60%;
-  font-size: 14px;
-  font-weight: 500;
-  text-align: left;
-  width: 100%;
+.weapon-stat {
+  padding:0 0 0 0;
 }
 
-.statline-label,
+.statline-name {
+  font-size: 11px;
+  text-transform: uppercase;
+  padding: 1px 0 0 1px;
+  font-weight: 500;
+  text-align: left;
+  line-height: 0.8;
+  width: 100%;
+  height: 11px;
+  margin: 1px 0 0 1px;
+  background-color: #e4dcd1;
+}
+
+.statline-list {
+  display: inline-block;
+  padding: 0 0 0 10px;
+  margin: 0;
+  overflow: auto;
+}
+
+.statline-label {
+  display: inline-block;
+  float: left;
+  position: relative;
+  height: 12px;
+  width: 13.8%;
+  box-sizing: border-box;
+  color: aliceblue;
+  font-size: 10px;
+  background-color: #3a2207;
+}
+
+.statline-label.cmd {
+  width: 17%;
+}
+
 .statline-stat {
+  display: inline-block;
   float: left;
   list-style: none;
-  height:25px;
-  width: 14.28%;
+  line-height: 0.8;
+  height: 14px;
+  width: 14%;
+  padding: 3px 0 0 0;
+  margin: 3px 0 0 0;
+  font-size: 12px;
+  font-weight: bold;
+  background-color: tan;
+}
+
+.statline-stat.cmd {
+  padding: 3px 0 0 5px;
+}
+
+.statline-attribute-list {
+  display: block;
+  padding: 0;
+  margin: -5px 0 0 0;
+  height: 30px;
+  width: 100%;
+  overflow: auto;
 }
 
 .statline-attribute {
+  display: inline-block;
+  float: right;
   list-style: none;
+  overflow: hidden;
+  margin: 0 0 0 1px;
+  width: 23px;
+  height: 23px;
+  border-radius: 50%;
+  border: 2px solid #343434;
+  color: white;
+}
+
+.statline-attribute-icon {
+  width: 100%;
+}
+
+.weapon {
+  display: block;
+  position: relative;
+  color: #343434;
+  font-size: 12px;
+  margin: 14px 0 0 61%;
+  padding: 1px 0 0 0;
+  width: 36.5%;
+  height: 53px;
+}
+
+.weapon-name {
+  background-color: #e4dcd1;
+  height: 16px;
+  text-align: left;
+  padding: 0 0 0 7px;
+  text-transform: uppercase;
+}
+
+.weapon-stats {
+  width: 100%;
+  height: 25px;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+}
+
+.weapon-label {
+  display: inline-block;
+  float: left;
+  color: white;
+  padding: 0 0 0 0;
+  height: 23px;
+  width: 24%;
+  text-align: center;
+  line-height: 0.8;
+  background-color: #3a2207;
+}
+
+.weapon-label.rof,
+.weapon-label.rng,
+.weapon-label.pow,
+.weapon-label.ps {
+  height: 10px;
+  padding: 0 0 0 0;
+}
+
+.weapon-stat {
+  height: 12px;
+  background-color: tan;
+}
+
+.model-damage {
+  border: 1px solid green;
+  width: 140px;
+  height: auto;
+  overflow: auto;
+
+  position: absolute;
+  bottom: 48px;
+  left: 22px;
+
+  display: flex;
+  flex-flow: column-reverse wrap;
+}
+
+.models{
+  background-color: tan;
+  display: block;
+  width: 100%;
+}
+
+.model {
+  position: relative;
+  list-style: none;
+  
+  height: 26px;
+  padding-right: 2px;
+
+  display: flex;
+  flex-flow: row-reverse wrap;
+}
+
+.model-letter {
+  height: 10px;
+  
+  width: 100%;
+  flex-grow: 1;
+  
+  text-align: right;
+  
+  position: absolute;
+  font-size: 9px;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+}
+
+.model-box {
+  width: 12px;
+  height: 12px;
+  background-color: gray;
+  margin-top: 2px;
+  border-right: 2px solid brown;
 }

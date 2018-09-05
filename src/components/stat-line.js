@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import AttributeHelper from './../classes/attribute-helper';
 
 export default class StatLine extends Component {
     constructor (props) {
@@ -13,35 +14,34 @@ export default class StatLine extends Component {
             def: props.def,
             arm: props.arm,
             cmd: props.cmd,
-            attributes: []
+            attributes: ['flight', 'stealth', 'base30']
         }
     }
 
     render () {
         return ( 
-            <div class="statline">
-                <div class="statline-name">{this.state.name}</div>
-                <ul class="statline-list">
-                    <li class="statline-label spd">spd</li>
-                    <li class="statline-label str">str</li>
-                    <li class="statline-label mat">mat</li>
-                    <li class="statline-label rat">rat</li>
-                    <li class="statline-label def">def</li>
-                    <li class="statline-label arm">arm</li>
-                    <li class="statline-label cmd">cmd</li>
-                    <li class="statline-stat spd"> {this.state.spd}</li>
-                    <li class="statline-stat str">{this.state.str} </li>
-                    <li class="statline-stat mat"> {this.state.mat}</li>
-                    <li class="statline-stat rat">{this.state.rat} </li>
-                    <li class="statline-stat def">{this.state.def} </li>
-                    <li class="statline-stat arm">{this.state.arm} </li>
-                    <li class="statline-stat cmd">{this.state.cmd} </li>
+            <div className="statline">
+                <div className="statline-name">{this.state.name}</div>
+                <ul className="statline-list">
+                    <li className="statline-label spd">spd</li>
+                    <li className="statline-label str">str</li>
+                    <li className="statline-label mat">mat</li>
+                    <li className="statline-label rat">rat</li>
+                    <li className="statline-label def">def</li>
+                    <li className="statline-label arm">arm</li>
+                    <li className="statline-label cmd">cmd</li>
+                    <li className="statline-stat spd"> {this.state.spd}</li>
+                    <li className="statline-stat str">{this.state.str} </li>
+                    <li className="statline-stat mat"> {this.state.mat}</li>
+                    <li className="statline-stat rat">{this.state.rat} </li>
+                    <li className="statline-stat def">{this.state.def} </li>
+                    <li className="statline-stat arm">{this.state.arm} </li>
+                    <li className="statline-stat cmd">{this.state.cmd} </li>
                 </ul>
-                <ul class="statline-attribute-list">
-                    {this.state.attributes.map((attribute) => {
-                        return (<li class="statline-attribute">{attribute}</li>)                    
+                <ul className="statline-attribute-list">
+                    {this.state.attributes.map((attribute, i) => {
+                        return (<li key={i} className="statline-attribute"><img className="statline-attribute-icon" src={ AttributeHelper.GetAttributeImage(attribute) } /></li>)                    
                     })}
-                    <li></li>
                 </ul>
             </div>
         )

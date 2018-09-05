@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Template from './../assets/grotesque.jpg';
 
 export default class SoloCard extends Component {
     constructor (props) {
@@ -13,10 +14,11 @@ export default class SoloCard extends Component {
 
     render () {
         return (
-            <div class="card">
-                <div class="nameplate">
-                    <div class="nameplate-name"> { this.state.name }</div>
-                    <div class="nameplate-classification">{ this.state.classification } </div>
+            <div className="card">
+            <img src={Template} className="card-template"/>
+                <div className="nameplate">
+                    <div className="nameplate-name"> { this.state.name }</div>
+                    <div className="nameplate-classification">{ this.state.classification } </div>
                 </div>
                 {this.props.children}
             </div>

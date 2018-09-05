@@ -1,0 +1,27 @@
+{
+    "base30": {
+        "name": "base30",
+        "icon": "base-30.jpg"
+    },
+    "base40":{
+        "name": "base40",
+        "icon": "base-40.jpg"
+    },
+    "base50":{
+        "name": "base50",
+        "icon": "base-50.jpg"
+    },
+    "base120":{
+        "name": "base120",
+        "icon": "base-120.jpg"
+    },
+    "flight": {
+        "name": "flight",
+        "icon": "flight.jpg"
+    },
+    "stealth": {
+        "name": "stealth",
+        "icon": "stealth.jpg"
+    }
+    
+}
